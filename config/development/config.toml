@@ -1,0 +1,13 @@
+buildDrafts = true
+buildExpired = true
+buildFuture = true
+
+# See https://gohugo.io/content-management/multilingual/#missing-translations
+# easier check can be done with this command
+# hugo --printI18nWarnings | grep i18n
+enableMissingTranslationPlaceholders = true
+
+# See https://gohugo.io/content-management/multilingual/#disable-a-language
+# disableLanguages = []
+
+watch = true
