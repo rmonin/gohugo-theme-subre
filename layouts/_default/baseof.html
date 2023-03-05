@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+<html class="no-js"
+    {{- with site.LanguageCode | default site.Language.Lang }} lang="{{.}}"{{end -}}
+    {{- if ne .Site.Params.rtl nil}} dir="{{with .Site.Params.rtl}}rtl{{else}}ltr{{end}}"{{end}}>
+{{partial "head.html" .}}
+<body class="
+    min-h-screen
+    m-0
+    flex flex-col
+    tracking-wide
+    font-light">
+    <header>
+      {{partial "header.html" .}}
+    </header>
+    <main class="grow flex flex-col justify-center">
+      {{block "main" . }}{{- end }}
+    </main>
+    <footer>
+      {{partialCached "footer.html" .}}
+    </footer>
+</body>
 </html>

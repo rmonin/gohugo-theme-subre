@@ -1,12 +1,13 @@
 name = "Subre"
 license = "MIT"
 licenselink = "https://github.com/rmonin/gohugo-theme-subre/blob/main/LICENSE"
-description = "Light theme for Hugo framework"
+description = "Simple theme for Hugo framework"
 homepage = "https://github.com/rmonin/gohugo-theme-subre/"
 tags = []
-features = []
+features = ["tailwind", "mobile", "light"]
 min_version = "0.111.1"
 
 [author]
 name = "Romain Monin"
+email = "contact@romain-monin.fr"
 homepage = "https://romain-monin.fr/"

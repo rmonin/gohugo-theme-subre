@@ -1,0 +1,4 @@
+[error]
+404_description = "Il semblerai que la page que vous cherchez n'existe pas ou ne peut pas être trouvée."
+404_error = "Oups..."
+404_title = "404"

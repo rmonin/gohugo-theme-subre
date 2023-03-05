@@ -1,15 +1,26 @@
 baseURL = "https://example.com/"
 title = "Subre Theme"
-author = "John Doe"
 copyright = "Copyright © 2023, John Doe; all rights reserved."
 defaultContentLanguage = "en"
 languageCode = "en-US"
+theme = ["gohugo-theme-subre"]
 
 paginate = 3
-theme = ["gohugo-theme-subre"]
+
+[author]
+name = "John Doe"
+email = "john.doe@example.com"
+bio = "John Doe's bio."
 
 [params]
 subtitle = "Demo"
+description = "My wonderful site description"
+keywords = ["tailwind", "mobile", "light"]
+
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+# themeColor = "#FFF"
+# themeColorLight = "#FFF"
+# themeColorDark = "#000"
 
 [menu]
   [[menu.main]]
@@ -43,3 +54,13 @@ series = "series"
     disableInlineCSS = true
   [services.twitter]
     disableInlineCSS = true
+
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    weight = 1
+  [languages.en]
+    languageCode = "en-US"
+     [languages.en.params]
+    weight = 2

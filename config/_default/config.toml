@@ -1,5 +1,4 @@
 # Ref doc. https://gohugo.io/getting-started/configuration/#all-configuration-settings
-
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
 pluralizeListTitles = false
