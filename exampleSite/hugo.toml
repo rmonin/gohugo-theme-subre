@@ -1,6 +1,6 @@
 baseURL = "https://example.com/"
 title = "Subre Theme"
-copyright = "Copyright © 2023, John Doe; all rights reserved."
+# copyright = "John Doe; all rights reserved."
 defaultContentLanguage = "en"
 languageCode = "en-US"
 theme = ["gohugo-theme-subre"]
@@ -9,13 +9,17 @@ paginate = 3
 
 [author]
 name = "John Doe"
+suffix = "Dummy"
 email = "john.doe@example.com"
+phone = "+1 202-918-2132"
+address = "3423 S 160th St, 98188 SeaTac"
 bio = "John Doe's bio."
 
 [params]
 subtitle = "Demo"
 description = "My wonderful site description"
 keywords = ["tailwind", "mobile", "light"]
+footerMention = "Some mention on footer section"
 
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
 # themeColor = "#FFF"

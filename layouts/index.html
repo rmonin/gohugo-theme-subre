@@ -1,8 +1,26 @@
-{{ define "main" }}
-<h1 class="
-  max-w-prose mx-auto
-  text-3xl font-semibold"
->
-  Hello World!
-</h1>
-{{ end }}
+{{define "main" -}}
+<div class="
+    mx-auto max-w-screen-lg px-4
+    flex flex-col md:flex-row-reverse
+    justify-between items-center">
+    <div class="basis-1/2 flex justify-center">
+        <address class="not-italic mt-4 mb-10">
+            <span class="font-semibold uppercase whitespace-nowrap">{{.Site.Author.name}}</span>
+            {{- with .Site.Author.suffix}} {{.}}{{end}}<br>
+            {{- with .Site.Author.address}}
+            <span class="whitespace-nowrap">{{.}}</span><br>{{end}}
+            {{- with .Site.Author.phone}}
+            <span class="whitespace-nowrap">{{.}}</span><br>{{end}}
+            {{with .Site.Author.email -}}
+            <a href="mailto:{{.}}"
+                class="text-pink-600 transition duration-300 linear hover:underline">
+                {{.}}
+            </a>
+            {{- end}}
+        </address>
+    </div>
+    <div class="basis-1/2">
+        <img class="shadow rounded" src="images/home.jpeg">
+    </div>
+</div>
+{{- end}}
