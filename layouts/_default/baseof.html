@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html class="no-js"
-    {{- with site.LanguageCode | default site.Language.Lang }} lang="{{.}}"{{end -}}
-    {{- if ne .Site.Params.rtl nil}} dir="{{with .Site.Params.rtl}}rtl{{else}}ltr{{end}}"{{end}}>
-{{partial "head.html" .}}
-<body class="
-    min-h-screen
-    m-0
-    flex flex-col
-    tracking-wide
-    font-light">
-    <header>
-        {{partial "header.html" .}}
+<html
+  {{- with site.LanguageCode | default site.Language.Lang }} lang="{{ . }}"{{ end -}}
+  {{- if ne .Site.Params.rtl nil }}dir="{{ with .Site.Params.rtl }}rtl{{ else }}ltr{{ end }}"{{ end }}>
+  {{ partial "head.html" . }}
+  <body class="m-0 min-h-screen flex flex-col  font-light tracking-wide text-neutral-900">
+    <header class="mb-2 border-b shadow-sm">
+      {{ partial "header.html" . }}
     </header>
-    <main class="grow flex flex-col justify-center">
-        {{block "main" . }}{{- end}}
+    {{ partial "breadcrumb.html" . }}
+    <main class="flex grow flex-col justify-center pt-10">
+      {{ block "main" . }}{{- end }}
     </main>
-    <footer>
-        {{partialCached "footer.html" .}}
+    <footer class="mt-10">
+      {{- /* partialCached "footer.html" . .IsHome */ -}}
+      {{ partialCached "footer.html" . }}
     </footer>
-</body>
+  </body>
 </html>

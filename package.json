@@ -6,7 +6,8 @@
   "scripts": {
     "dev:css": "NODE_ENV=development npx tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "dev:hugo": "hugo server --source exampleSite --themesDir ../.. --configDir ../config",
-    "dev": "run-p dev:*"
+    "dev": "run-p dev:*",
+    "check:pretty": "npx prettier --check ./**/*.(js|html?) --config .prettierrc"
   },
   "keywords": [],
   "author": "Romain Monin <contact@romain-monin.fr>",
@@ -14,8 +15,9 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.4",
+    "prettier-plugin-go-template": "^0.0.13",
+    "prettier-plugin-tailwindcss": "^0.2.4",
     "tailwindcss": "^3.2.7"
-  },
-  "dependencies": {
   }
 }

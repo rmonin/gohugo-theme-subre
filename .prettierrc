@@ -1,0 +1,20 @@
+{
+  "bracketSameLine": true,
+  "goTemplateBracketSpacing": true,
+  "htmlWhitespaceSensitivity": "css",
+  "printWidth": 120,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  overrides: [
+    {
+      files: ["*.html"],
+      options: {
+        parser: "go-template",
+      },
+    },
+  ],
+  plugins: [
+    "prettier-plugin-tailwindcss",
+  ],
+}

@@ -1,7 +1,9 @@
 # gohugo-theme-subre
+
 Light theme for Hugo framework
 
 ## Roadmap
+
 - [ ] og meta tags
 - [ ] twitter meta tags
 - [ ] meta tag name="application-name"
@@ -12,6 +14,7 @@ Light theme for Hugo framework
 - [ ] favicons
 
 ## Ressources
+
 - https://github.com/gohugoio/hugoThemes#adding-a-theme-to-the-list
 - https://functional.style/hugo/general/tailwind/
 - https://toml.io/en/v1.0.0

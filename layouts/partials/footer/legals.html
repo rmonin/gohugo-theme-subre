@@ -1,0 +1,24 @@
+<div class="md:flex md:flex-col-reverse">
+  {{- with .Site.GetPage "Section" "legal" }}
+  <nav class="py-4 md:py-0">
+    <ul>
+    {{- range where (.Site.RegularPages.ByParam "order") "Section" "legal" }}
+      <li class="inline-block
+        before:inline-block before:pr-3 before:text-neutral-300 before:content-['|']
+        after:pl-3 first:before:hidden first:before:pr-0 last:after:pl-0">
+        <a href="{{ .Permalink }}" class="linear py-1 transition duration-300 hover:text-pink-600">
+          {{ .LinkTitle }}
+        </a>
+      </li>
+    {{- end }}
+    </ul>
+  </nav>
+  {{- end }}
+  <p class="pt-2.5 pb-6 md:mb-1.5 md:py-0">
+  {{- with .Site.Copyright }}
+    {{- . }}
+  {{- else }}
+    {{- i18n "copyright" | strings.FirstUpper }} &copy; {{ now.Year -}}.
+  {{- end -}}
+  </p>
+</div>

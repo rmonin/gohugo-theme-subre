@@ -1,0 +1,16 @@
+{{ define "main" -}}
+  <div class="prose mx-auto max-w-prose px-4% text-center">
+    {{ .Content }}
+    <div class="not-prose">
+      <ul>
+        {{ range (.Pages.ByParam "order") }}
+          <li>
+            <a class="font-normal underline" href="{{ .Permalink }}">
+              {{ .LinkTitle }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+{{- end }}

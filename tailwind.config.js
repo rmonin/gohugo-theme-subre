@@ -6,9 +6,16 @@ module.exports = {
     "./themes/subre/content/**/*.{html,md}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        "4%": "4%",
+      },
+      typography: {
+        DEFAULT: {
+          css: {},
+        },
+      },
+    },
   },
-  plugins: [
-     require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography")],
+};
