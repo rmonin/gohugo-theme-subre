@@ -1,0 +1,18 @@
+{{ if not .IsHome -}}
+<section class="hidden text-xs uppercase italic md:block md:pb-2">
+  <div class="mx-auto max-w-screen-lg px-4%">
+    <ol>
+    {{- range .Ancestors.Reverse }}
+      <li class="inline-block before:text-neutral-300 before:content-['/'] first:before:hidden">
+        <a href="{{ .Permalink }}" class="linear py-1 transition duration-300 hover:text-pink-600">
+          {{ if .IsHome }}{{ i18n "home" }}{{ else }}{{ .Title }}{{ end }}
+        </a>
+      </li>
+    {{- end }}
+      <li class="inline-block before:text-neutral-300 before:content-['/']" aria-current="page">
+        <span class="text-pink-600">{{ .Title }}</span>
+      </li>
+    </ol>
+  </div>
+</section>
+{{- end }}
