@@ -1,29 +1,18 @@
 {{ define "main" -}}
-  {{- $feature:= resources.GetMatch "home.jpeg" }}
-{{ with .Resources.GetMatch "home.jpeg" }}
-  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
-{{ end }}
-{{ with .Resources.GetMatch "images/home.jpeg" }}
-  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}">
-{{ end }}
+{{- $feature:= resources.GetMatch .Site.Author.image }}
   <div
     class="mx-auto
     max-w-screen-lg items-center
-    justify-between px-4% md:flex md:flex-row-reverse">
-    <div class="flex justify-center text-center md:text-left">
+    justify-start px-4% md:flex md:flex-row">
+    <div class="flex justify-center text-center md:text-left md:order-last">
       <div class="pb-10 text-sm">
         {{ partial "contact.html" . }}
       </div>
     </div>
-    {{/* with $feature */}}
-      <div class="basis-1/2 text-center md:mr-4%">
-{{ $lxqtscr := resources.Get "images/home.jpeg" }}
-        <img class="mx-auto rounded shadow" src="{{ $lxqtscr.Permalink }}" />
+    {{ with $feature }}
+    <div class="md:basis-1/2 max-w-sm md:max-w-none text-center md:mr-4%">
+        <img class="rounded shadow" src="{{ .RelPermalink }}" />
       </div>
-    {{/* end */}}
+    {{ end }}
   </div>
-  {{ with .Content }}
-    <hr>
-    {{ . }}
-  {{end}}
 {{- end }}
