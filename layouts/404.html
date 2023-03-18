@@ -6,6 +6,7 @@
       {{ i18n "error.404_description" }}
     </p>
   </div>
+{{ $img := resources.Get "images/404.gif" }}
   <img class="hidden md:inline absolute bottom-0 right-0"
-      src="/images/404.gif">
+      src="{{ $img.Permalink }}">
 {{ end }}
