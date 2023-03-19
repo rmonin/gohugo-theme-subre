@@ -8,9 +8,11 @@
     <span class="whitespace-nowrap">{{ . }}</span><br />
   {{ end }}
   {{ with .Site.Author.email -}}
-    <a href="mailto:{{ . }}" class="linear text-pink-600 transition duration-300 hover:underline">
+    <a href="mailto:{{ . }}" class="text-pink-600 linear transition duration-300 hover:underline">
       {{ . }}
     </a>
   {{- end }}
 </address>
+{{if not .IsHome }}
 {{- with .Site.Author.bio }}<p>{{ . }}</p>{{ end -}}
+{{end}}

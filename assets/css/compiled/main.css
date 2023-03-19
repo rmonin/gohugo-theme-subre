@@ -971,10 +971,6 @@ video {
   margin-bottom: 0;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -989,14 +985,6 @@ video {
 
 .right-0 {
   right: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .float-left {
@@ -1021,12 +1009,12 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -1069,10 +1057,6 @@ video {
   max-width: 24rem;
 }
 
-.max-w-none {
-  max-width: none;
-}
-
 .shrink {
   flex-shrink: 1;
 }
@@ -1087,10 +1071,6 @@ video {
 
 .basis-1\/3 {
   flex-basis: 33.333333%;
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -1474,14 +1454,6 @@ video {
   max-width: 65ch;
 }
 
-.prose-blockquote\:max-w-xs :is(:where(blockquote):not(:where([class~="not-prose"] *))) {
-  max-width: 20rem;
-}
-
-.prose-blockquote\:max-w-sm :is(:where(blockquote):not(:where([class~="not-prose"] *))) {
-  max-width: 24rem;
-}
-
 .prose-figure\:mx-auto :is(:where(figure):not(:where([class~="not-prose"] *))) {
   margin-left: auto;
   margin-right: auto;
@@ -1605,10 +1577,6 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-row-reverse {
-    flex-direction: row-reverse;
   }
 
   .md\:flex-col-reverse {

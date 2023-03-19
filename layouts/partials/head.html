@@ -25,6 +25,11 @@
 {{- if $cssCustom }}{{ $assets.Add "css" (slice $cssCustom) }}{{ end -}}
 {{- $bundleCSS:= $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" -}}
 
+{{- /* Favicon */ -}}
+{{- $ico:= resources.Get "favicon/favicon.ico" -}}
+{{- $svg := resources.Get "favicon/favicon.svg" -}}
+{{- $touch := resources.Get "favicon/apple-touch-icon.png" -}}
+
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,4 +66,7 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer">
+  <link rel="icon" href="{{ $ico.Permalink }}" sizes="any">
+<!--    <link rel="icon" type="image/svg+xml" href="">-->
+    <link rel="apple-touch-icon" href="{{ $touch.Permalink }}">
 </head>
